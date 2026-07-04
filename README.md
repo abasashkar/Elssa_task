@@ -208,14 +208,3 @@ Splash → Sign Up → OTP → Location → Home
 | `docs/screenshots/` | App screenshots for documentation |
 
 ---
-
-## Credits
-
-<p align="center">
-  Powered by <strong>Oyelabs</strong><br/>
-  WITH LOVE 💙
-</p>
-
-<p align="center">
-  <sub>Elssa — Hassle Free Quality Service · v1.0</sub>
-</p>
