@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../core/theme/app_colors.dart';
 import '../home/home_screen.dart';
+import '../profile/profile_screen.dart';
 
 class MainShell extends StatefulWidget {
   const MainShell({super.key});
@@ -18,7 +19,7 @@ class _MainShellState extends State<MainShell> {
     _PlaceholderTab('Rewards'),
     _PlaceholderTab('My Orders'),
     _PlaceholderTab('Bookings'),
-    _PlaceholderTab('Profile'),
+    const ProfileScreen(),
   ];
 
   @override

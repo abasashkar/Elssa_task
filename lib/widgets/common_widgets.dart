@@ -113,7 +113,7 @@ class SocialButton extends StatelessWidget {
   });
 
   final String label;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final Color backgroundColor;
   final Color textColor;
   final Widget icon;
@@ -165,9 +165,12 @@ class BackButtonWidget extends StatelessWidget {
       alignment: Alignment.centerLeft,
       child: IconButton(
         onPressed: () => Navigator.pop(context),
-        icon: const Icon(Icons.arrow_back, color: AppColors.textPrimary, size: 22),
-        padding: EdgeInsets.zero,
-        constraints: const BoxConstraints(),
+        icon: const Icon(Icons.arrow_back, color: AppColors.textPrimary, size: 26),
+        padding: const EdgeInsets.only(left: 0, top: 8, bottom: 8, right: 8),
+        constraints: const BoxConstraints(minWidth: 44, minHeight: 44),
+        style: IconButton.styleFrom(
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        ),
       ),
     );
   }

@@ -1,12 +1,58 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import '../../core/constants/app_assets.dart';
 import '../../core/constants/app_routes.dart';
 import '../../core/theme/app_colors.dart';
+import '../../services/auth_service.dart';
 import '../../widgets/common_widgets.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool _isGoogleLoading = false;
+
+  Future<void> _handleGoogleSignIn() async {
+    if (_isGoogleLoading) return;
+
+    setState(() => _isGoogleLoading = true);
+
+    try {
+      await AuthService.instance.signInWithGoogle();
+      if (!mounted) return;
+      Navigator.pushNamedAndRemoveUntil(
+        context,
+        AppRoutes.location,
+        (_) => false,
+      );
+    } on GoogleSignInException catch (e) {
+      if (e.code == GoogleSignInExceptionCode.canceled) return;
+      _showError(e.description ?? 'Google sign-in failed.');
+    } on FirebaseAuthException catch (e) {
+      _showError(e.message ?? 'Authentication failed.');
+    } on AuthException catch (e) {
+      _showError(e.message);
+    } catch (_) {
+      _showError('Something went wrong. Please try again.');
+    } finally {
+      if (mounted) {
+        setState(() => _isGoogleLoading = false);
+      }
+    }
+  }
+
+  void _showError(String message) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +64,12 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 8),
-              const BackButtonWidget(),
-              const SizedBox(height: 24),
+              const SizedBox(height: 4),
+              Transform.translate(
+                offset: const Offset(-6, 0),
+                child: const BackButtonWidget(),
+              ),
+              const SizedBox(height: 20),
               Center(
                 child: Text(
                   'Welcome Back!',
@@ -51,13 +100,19 @@ class LoginScreen extends StatelessWidget {
                 backgroundColor: AppColors.white,
                 textColor: AppColors.textSecondary,
                 borderColor: AppColors.border,
-                icon: Image.asset(
-                  AppAssets.googleLogo,
-                  width: 22,
-                  height: 22,
-                  fit: BoxFit.contain,
-                ),
-                onPressed: () {},
+                icon: _isGoogleLoading
+                    ? const SizedBox(
+                        width: 22,
+                        height: 22,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
+                    : Image.asset(
+                        AppAssets.googleLogo,
+                        width: 22,
+                        height: 22,
+                        fit: BoxFit.contain,
+                      ),
+                onPressed: _isGoogleLoading ? null : _handleGoogleSignIn,
               ),
               const SizedBox(height: 28),
               Center(

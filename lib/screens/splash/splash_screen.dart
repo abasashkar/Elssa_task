@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
           const Spacer(flex: 3),
           Image.asset(
             AppAssets.elssaLogo,
-            width: 160,
+            width: 220,
             fit: BoxFit.contain,
           ),
           const Spacer(flex: 4),

@@ -38,8 +38,14 @@ class _OtpScreenState extends State<OtpScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 28),
           child: Column(
             children: [
-              const SizedBox(height: 8),
-              const Align(alignment: Alignment.centerLeft, child: BackButtonWidget()),
+              const SizedBox(height: 4),
+              Transform.translate(
+                offset: const Offset(-6, 0),
+                child: const Align(
+                  alignment: Alignment.centerLeft,
+                  child: BackButtonWidget(),
+                ),
+              ),
               const SizedBox(height: 20),
               Image.asset(
                 AppAssets.otpIllustration,
