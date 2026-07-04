@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "443943307854",
+    "project_id": "elsa-task",
+    "storage_bucket": "elsa-task.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443943307854:android:efe3b96a5265b65263111f",
+        "android_client_info": {
+          "package_name": "com.example.elssa_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443943307854-if8malcdecr8t5san9kql3mmrcok1c2l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elssa_task",
+            "certificate_hash": "3cc8ec9d44a64a25ee2f3a2999f0c60babc75adc"
+          }
+        },
+        {
+          "client_id": "443943307854-krggkjph1bneuptce1h4t4haqhekar28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Swnzsuz9ZSWWlncZnJaGWjgrk4NoVcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443943307854-krggkjph1bneuptce1h4t4haqhekar28.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "443943307854-4b3qpumru36ad1vveqv9d64ih4d6sq2g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.elssaTask"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
