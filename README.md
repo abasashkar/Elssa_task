@@ -25,8 +25,6 @@
 
 ## Screenshots
 
-### Splash & Onboarding
-
 <table>
   <tr>
     <td align="center"><b>Splash</b></td>
@@ -34,9 +32,9 @@
     <td align="center"><b>OTP Verification</b></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/01-splash.png" width="240" alt="Splash Screen" /></td>
-    <td><img src="docs/screenshots/02-signup.png" width="240" alt="Sign Up Screen" /></td>
-    <td><img src="docs/screenshots/03-otp.png" width="240" alt="OTP Screen" /></td>
+    <td align="center"><img src="docs/screenshots/01-splash.png" width="220" alt="Splash Screen" /></td>
+    <td align="center"><img src="docs/screenshots/02-signup.png" width="220" alt="Sign Up Screen" /></td>
+    <td align="center"><img src="docs/screenshots/03-otp.png" width="220" alt="OTP Screen" /></td>
   </tr>
   <tr>
     <td align="center"><b>Location</b></td>
@@ -44,36 +42,31 @@
     <td align="center"><b>Google Sign-In</b></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/04-location.png" width="240" alt="Location Screen" /></td>
-    <td><img src="docs/screenshots/08-login.png" width="240" alt="Login Screen" /></td>
-    <td><img src="docs/screenshots/09-google-signin.png" width="240" alt="Google Sign-In" /></td>
+    <td align="center"><img src="docs/screenshots/04-location.png" width="220" alt="Location Screen" /></td>
+    <td align="center"><img src="docs/screenshots/08-login.png" width="220" alt="Login Screen" /></td>
+    <td align="center"><img src="docs/screenshots/09-google-signin.png" width="220" alt="Google Sign-In" /></td>
   </tr>
-</table>
-
-### Home & Services
-
-<table>
   <tr>
     <td align="center"><b>Home — Banner & Grid</b></td>
-    <td align="center"><b>Home — Services & Trust Badges</b></td>
+    <td align="center"><b>Home — Services</b></td>
+    <td align="center"><b>Profile</b></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/05-home.png" width="280" alt="Home Banner" /></td>
-    <td><img src="docs/screenshots/06-home-services.png" width="280" alt="Home Services" /></td>
+    <td align="center"><img src="docs/screenshots/05-home.png" width="220" alt="Home Banner" /></td>
+    <td align="center"><img src="docs/screenshots/06-home-services.png" width="220" alt="Home Services" /></td>
+    <td align="center"><img src="docs/screenshots/10-profile.png" width="220" alt="Profile Screen" /></td>
   </tr>
   <tr>
-    <td align="center" colspan="2"><b>Why Choose Us & Safety Measures</b></td>
+    <td align="center"><b>Why Choose Us</b></td>
+    <td align="center"><b>Safety & Footer</b></td>
+    <td align="center"><b>Google Account Picker</b></td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><img src="docs/screenshots/07-why-choose-us.png" width="320" alt="Why Choose Us" /></td>
+    <td align="center"><img src="docs/screenshots/07-why-choose-us.png" width="220" alt="Why Choose Us" /></td>
+    <td align="center"><img src="docs/screenshots/11-safety-footer.png" width="220" alt="Safety and Footer" /></td>
+    <td align="center"><img src="docs/screenshots/09-google-signin.png" width="220" alt="Google Account Picker" /></td>
   </tr>
 </table>
-
-### Profile
-
-<p align="center">
-  <img src="docs/screenshots/10-profile.png" width="280" alt="Profile Screen" />
-</p>
 
 ---
 
