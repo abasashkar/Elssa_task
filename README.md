@@ -23,6 +23,15 @@
 
 ---
 
+## Download & Demo
+
+| Resource | Link |
+|----------|------|
+| **APK (Release)** | [Download app-release.apk](https://drive.google.com/file/d/1nDZ7uDLkdoWVfZjAtkV6a_ExEwod3RHj/view?usp=share_link) |
+| **Video Walkthrough** | [Watch demo on Google Drive](https://drive.google.com/file/d/192zBGGOLi0cjO3lP4J66fGmeCkPb-OA9/view?usp=share_link) |
+
+---
+
 ## Screenshots
 
 <table>
@@ -169,6 +178,8 @@ fvm flutter build apk --release
 ```
 
 Output: `build/app/outputs/flutter-apk/app-release.apk`
+
+**Pre-built APK:** [Download from Google Drive](https://drive.google.com/file/d/1nDZ7uDLkdoWVfZjAtkV6a_ExEwod3RHj/view?usp=share_link)
 
 > **Note:** For release builds signed with a custom keystore, add that keystore's SHA-1 to Firebase as well.
 
